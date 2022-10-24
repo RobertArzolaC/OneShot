@@ -1,4 +1,4 @@
-# Proyecto Carga de archivos SignBox
+# Proyecto para Carga de archivos OneShot
 
 ## Primero clonar el proyecto
     
