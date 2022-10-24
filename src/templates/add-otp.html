@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %} OneShot | Add OTP {% endblock %}
+{% block content %}
+<div class="container">
+  <div class="my-3 card">
+    <div class="card-body">
+      <h1 class="card-title">Agregar OTP</h1>
+      <div class="card-subtitle h6">Registrar OTP enviado al móvil</div>
+      <form method="post">
+        <div class="mt-3 row">
+          <div class="col-2">
+            <div class="mb-3">
+              <label class="form-label">Código OTP</label>
+              <div class="input-group">
+                <input
+                  name="otp_code"
+                  required=""
+                  type="text"
+                  class="form-control"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-danger">
+          Enviar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

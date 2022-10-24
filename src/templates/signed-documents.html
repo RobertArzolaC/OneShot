@@ -1,0 +1,185 @@
+{% extends "base.html" %}
+{% block title %} OneShot | Add Document {% endblock %}
+{% block content %}
+<div class="container">
+  <div class="my-3 card">
+    <div class="card-body">
+      <h1 class="card-title">Firmar Documentos</h1>
+      <div class="card-subtitle h6">Crear solicitud de firma</div>
+      <form
+        enctype="multipart/form-data"
+        method="post"
+      >
+        <div class="mt-3 row">
+          <div class="col">
+            <div class="mb-3">
+              <label class="form-label">Nombre</label>
+              <div class="input-group">
+                <input
+                  name="given_name"
+                  required=""
+                  type="text"
+                  class="form-control"
+                  value="Robert"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="mb-3">
+              <label class="form-label">Apellido Paterno</label>
+              <div class="input-group">
+                <input
+                  name="surname_1"
+                  required=""
+                  type="text"
+                  class="form-control"
+                  value="Arzola"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="mb-3">
+              <label class="form-label">Apellido Materno</label>
+              <input
+                name="surname_2"
+                type="text"
+                class="form-control"
+                value="Castillo"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="mt-3 row">
+          <div class="col">
+            <div class="mb-8">
+              <label class="form-label">Tipo de documento</label
+              ><select required="" name="id_document_type" class="form-select">
+                <option value="IDC">
+                  IDC - Identificación basada en el número de documento nacional de identidad.
+                </option>
+                <option value="PAS">
+                  PAS - Identificación basada en el número de pasaporte
+                </option>
+                <option value="PNO">
+                  PNO - Identificación basada en número personal nacional
+                  (número de registro cívico nacional)
+                </option>
+                <option value="TIN">
+                  TIN - Número de Identificación Fiscal según el Código Europeo
+                  Comisión
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="col">
+            <div class="mb-4">
+              <label class="form-label">Documento de Identificación</label>
+              <input
+                name="id_document"
+                maxlength="8"
+                type="text"
+                class="form-control"
+                value="12345678A"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="mt-3 row">
+          <div class="col">
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input
+                name="email"
+                required=""
+                type="email"
+                placeholder="test@gmail.com"
+                class="form-control"
+                value="robert.arzola.c@gmail.com"
+              />
+            </div>
+          </div>
+          <div class="col">
+            <div class="mb-3">
+              <label class="form-label">Número Telefónico</label>
+              <input
+                name="mobile_phone_number"
+                required=""
+                placeholder="999999999"
+                type="text"
+                class="form-control"
+                value="931314241"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- <div class="mt-3 row">
+          <div class="col">
+            <div class="mb-3">
+              <label class="form-label">Perfil</label
+              ><select required="" name="profile" class="form-select">
+                <option value="PFnubeNC">
+                  PFnubeNC - Uanataca's normalized digital certificate used for
+                  advanced signature.
+                </option>
+              </select>
+            </div>
+          </div>
+        </div> -->
+        <div class="mt-3 row">
+          <div class="col">
+            <div class="mb-3">
+              <label class="form-label">Imagen Frontal del Documento</label
+              ><input name="document_front" type="file" class="form-control" />
+            </div>
+          </div>
+          <div class="col">
+            <div class="mb-3">
+              <label class="form-label">Imagen Trasera del Documento</label
+              ><input name="document_rear" type="file" class="form-control" />
+            </div>
+          </div>
+          <div class="col">
+            <div class="mb-3">
+              <label class="form-label">Selfie con el Documento</label
+              ><input name="document_owner" type="file" class="form-control" />
+            </div>
+          </div>
+        </div>
+        <div class="mt-3 row">
+          <div class="col">
+            <div class="mb-3">
+              <label class="form-label">Archivo PDF</label>
+              <input
+                name="document_pdf"
+                multiple=""
+                required=""
+                type="file"
+                class="form-control"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- <div class="row">
+          <div class="col">
+            <div class="mb-3">
+              <label class="form-label">Coordenadas de la Firma</label>
+              <input
+                name="image_position"
+                required=""
+                type="text"
+                class="form-control"
+                value="300, 100, 500, 150"
+              />
+            </div>
+          </div>
+        </div> -->
+        <button type="submit" class="btn btn-danger">
+          Firmar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
